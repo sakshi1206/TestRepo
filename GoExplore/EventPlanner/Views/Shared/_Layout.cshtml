@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Event Planner</title>
+    
+    @Styles.Render("~/Content/eventcss")
+    
+</head>
+<body id="body">
+    <header class="site-header">
+        <div class="header-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-10 col-lg-2 order-lg-1">
+                        <div class="site-branding">
+                            <div class="site-title">
+                                <a href="#"><img src="~/images/logo.png" alt="logo"></a>
+                            </div><!-- .site-title -->
+                        </div><!-- .site-branding -->
+                    </div><!-- .col -->
+
+                    <div class="col-2 col-lg-7 order-3 order-lg-2">
+                        <nav class="site-navigation">
+                            <div class="hamburger-menu d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!-- .hamburger-menu -->
+
+                            <ul>
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                                <li>@Html.ActionLink("Event", "EventList", "Event")</li>
+                                <li>@Html.ActionLink("Event News", "News", "EventNews")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+                    </div><!-- .col -->
+
+                    <div class="col-lg-3 d-none d-lg-block order-2 order-lg-3">
+                        <div class="buy-tickets">
+                            <a class="btn gradient-bg" href="#">Buy Tickets</a>
+                        </div><!-- .buy-tickets -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container-fluid -->
+        </div><!-- .header-bar -->
+
+        @RenderBody()
+
+    </header><!-- .site-header -->
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <figure class="footer-logo">
+                        <a href="#"><img src="../../images/logo.png" alt="logo"></a>
+                    </figure>
+
+                    <nav class="footer-navigation">
+                        <ul class="flex flex-wrap justify-content-center align-items-center">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li>@Html.ActionLink("Event", "EventList", "Event")</li>
+                            <li>@Html.ActionLink("Event News", "News", "EventNews")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Login", "Index", "Admin/Login")</li>
+                        </ul>
+                    </nav>
+
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                    <div class="footer-social">
+                        <ul class="flex flex-wrap justify-content-center align-items-center">
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top flex justify-content-center align-items-center">
+        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z" /></svg></span>
+    </div>
+
+    @Scripts.Render("~/bundles/eventjs")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
